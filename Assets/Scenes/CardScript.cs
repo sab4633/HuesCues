@@ -14,6 +14,7 @@ public class CardScript : MonoBehaviour
     Color selectedColor;
     string selectedLabel;
     Text maintext;
+    string[] keyArray;
     
 
 
@@ -44,6 +45,7 @@ public class CardScript : MonoBehaviour
         COLORDICT.Add("G1", new Color(254f / 255f, 193f / 255f, 19f / 255f, 1f));
 
 
+        keyArray = COLORDICT.Keys.ToArray();
         maintext = GameObject.Find("maintext").GetComponent<Text>();
         
 
@@ -56,7 +58,7 @@ public class CardScript : MonoBehaviour
     void Update()
     {
         
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && maintext.text.Equals("Select a color"))
         {
             Texture2D MyTexture = ScreenCapture.CaptureScreenshotAsTexture();
             selectedColor = MyTexture.GetPixel((int)Input.mousePosition.x,
@@ -66,7 +68,7 @@ public class CardScript : MonoBehaviour
                 if(squares[i].color == selectedColor)
                 {
                     selectedLabel = labels[i].text;
-                    maintext.text = selectedLabel+ " Selected";
+                    maintext.text = "Select "+ selectedLabel + "?";
                 }
             }
 
@@ -88,17 +90,38 @@ public class CardScript : MonoBehaviour
         currentCard = new Dictionary<string, Color>();
         while(currentCard.Count < 4) 
         {
-            var randomKey = COLORDICT.Keys.ToArray()[Random.Range(0, COLORDICT.Keys.Count)];
+            var randomKey = keyArray[Random.Range(0, COLORDICT.Keys.Count)];
             if (!currentCard.ContainsKey(randomKey))
             {
                 squares[currentCard.Count].color = COLORDICT[randomKey];
                 labels[currentCard.Count].text = randomKey;
                 currentCard[randomKey] = COLORDICT[randomKey];
             }
-            
-            
         }
-        
+    }
+
+    public void ClearCard()
+    {
+        for(int i =0; i<4; i++)
+        {
+            squares[i].color = Color.black;
+            labels[i].text = "";
+        }
+    }
+
+    public string Guess(Color col)
+    {
+        if (COLORDICT.ContainsValue(col))
+        {
+            foreach(var key in keyArray)
+            {
+                if(col == COLORDICT[key])
+                {
+                    return key;
+                }
+            }
+        }
+        return "";
     }
 
 
