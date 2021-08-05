@@ -38,11 +38,11 @@ public class CardScript : MonoBehaviour
         //setup colors for board
         COLORDICT.Add("A1", new Color(97f / 255f, 43f / 255f, 15f / 255f, 1f));
         COLORDICT.Add("B1",new Color(136f / 255f, 75f / 255f, 31f / 255f, 1f));
-        COLORDICT.Add("C1", new Color(166f / 255f, 96f / 255f, 40f / 255f, 1f));
+        COLORDICT.Add("C1", new Color(166f / 255f, 97f / 255f, 40f / 255f, 1f));
         COLORDICT.Add("D1", new Color(201f / 255f, 130f / 255f, 42f / 255f, 1f));
         COLORDICT.Add("E1", new Color(230f / 255f, 156f / 255f, 35f / 255f, 1f));
         COLORDICT.Add("F1", new Color(254f / 255f, 180f / 255f, 21f / 255f, 1f));
-        COLORDICT.Add("G1", new Color(254f / 255f, 193f / 255f, 19f / 255f, 1f));
+        COLORDICT.Add("G1", new Color(253f / 255f, 193f / 255f, 19f / 255f, 1f));
 
 
         keyArray = COLORDICT.Keys.ToArray();

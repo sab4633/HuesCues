@@ -14,6 +14,10 @@ public class Round : MonoBehaviour
     int playerCount;
     int round;
     int maxrounds;
+    Vector3 baseCoordinates = new Vector3(-4.17f, 2.41f ,1f);
+    float xdiff = 0.483f;
+    float ydiff = 0.455f;
+    Dictionary<string, int> alph = new Dictionary<string, int>();
     SpriteRenderer[] playerSprites = new SpriteRenderer[3];
 
 
@@ -22,6 +26,10 @@ public class Round : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        alph.Add("A", 0); alph.Add("B", 1); alph.Add("C", 2); alph.Add("D", 3);
+        alph.Add("E", 4); alph.Add("F", 5); alph.Add("G", 6); alph.Add("H", 7);
+        alph.Add("I", 8); alph.Add("J", 9); alph.Add("L", 10); alph.Add("M", 11);
+        alph.Add("N", 12); alph.Add("O", 13); alph.Add("P", 14);
         currentPlayer = 0;
         playerCount = players.Length;
         round = 0;
@@ -55,7 +63,10 @@ public class Round : MonoBehaviour
             var key = cs.Guess(selectedColor);
             if (!key.Equals(""))
             {
-                playerSprites[currentPlayer].transform.position = new Vector3(Input.mousePosition.x-533.21f, Input.mousePosition.y-587.9f, 3f);
+                playerSprites[currentPlayer].transform.position = new Vector3(
+                    baseCoordinates.x+(xdiff* (int.Parse(key.Substring(1))-1)),
+                    baseCoordinates.y-(ydiff* alph[key.Substring(0, 1)]),
+                    1f);
                 //playerSprites[currentPlayer].color = Color.blue;
                 nextPlayer();
             }
@@ -67,6 +78,7 @@ public class Round : MonoBehaviour
     public void StartRound()
     {
         turntracker.text = players[currentPlayer]+" give cue";
+        round++;
     }
 
     void nextPlayer()
