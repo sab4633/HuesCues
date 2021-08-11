@@ -33,8 +33,9 @@ public class Round : MonoBehaviour
         turn = 0;
         alph.Add("A", 0); alph.Add("B", 1); alph.Add("C", 2); alph.Add("D", 3);
         alph.Add("E", 4); alph.Add("F", 5); alph.Add("G", 6); alph.Add("H", 7);
-        alph.Add("I", 8); alph.Add("J", 9); alph.Add("L", 10); alph.Add("M", 11);
-        alph.Add("N", 12); alph.Add("O", 13); alph.Add("P", 14);
+        alph.Add("I", 8); alph.Add("J", 9); alph.Add("K", 10); alph.Add("L", 11);
+        alph.Add("M", 12); alph.Add("N", 13); alph.Add("O", 14);
+        alph.Add("P", 15);
         currentPlayer = 0;
         playerCount = players.Length;
         round = 0;

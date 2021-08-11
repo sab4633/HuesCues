@@ -43,7 +43,32 @@ public class CardScript : MonoBehaviour
         COLORDICT.Add("E1", new Color(230f / 255f, 156f / 255f, 35f / 255f, 1f));
         COLORDICT.Add("F1", new Color(254f / 255f, 180f / 255f, 21f / 255f, 1f));
         COLORDICT.Add("G1", new Color(253f / 255f, 193f / 255f, 19f / 255f, 1f));
+        COLORDICT.Add("H1", new Color(252f / 255f, 208f / 255f, 23f / 255f, 1f));
+        COLORDICT.Add("I1", new Color(252f / 255f, 225f / 255f, 24f / 255f, 1f));
+        COLORDICT.Add("J1", new Color(249f / 255f, 236f / 255f, 36f / 255f, 1f));
+        COLORDICT.Add("K1", new Color(246f / 255f, 239f / 255f, 60f / 255f, 1f));
+        COLORDICT.Add("L1", new Color(241f / 255f, 236f / 255f, 33f / 255f, 1f));
+        COLORDICT.Add("M1", new Color(224f / 255f, 227f / 255f, 32f / 255f, 1f));
+        COLORDICT.Add("N1", new Color(194f / 255f, 216f / 255f, 45f / 255f, 1f));
+        COLORDICT.Add("O1", new Color(158f / 255f, 196f / 255f, 57f / 255f, 1f));
+        COLORDICT.Add("P1", new Color(123f / 255f, 165f / 255f, 65f / 255f, 1f));
 
+        COLORDICT.Add("A2", new Color(107f / 255f, 39f / 255f, 16f / 255f, 1f));
+        COLORDICT.Add("B2", new Color(148f / 255f, 68f / 255f, 31f / 255f, 1f));
+        COLORDICT.Add("C2", new Color(172f / 255f, 91f / 255f, 38f / 255f, 1f));
+        COLORDICT.Add("D2", new Color(215f / 255f, 130f / 255f, 40f / 255f, 1f));
+        COLORDICT.Add("E2", new Color(241f / 255f, 153f / 255f, 30f / 255f, 1f));
+        COLORDICT.Add("F2", new Color(252f / 255f, 177f / 255f, 34f / 255f, 1f));
+        COLORDICT.Add("G2", new Color(253f / 255f, 192f / 255f, 41f / 255f, 1f));
+        COLORDICT.Add("H2", new Color(254f / 255f, 205f / 255f, 42f / 255f, 1f));
+        COLORDICT.Add("I2", new Color(252f / 255f, 220f / 255f, 39f / 255f, 1f));
+        COLORDICT.Add("J2", new Color(249f / 255f, 235f / 255f, 42f / 255f, 1f));
+        COLORDICT.Add("K2", new Color(246f / 255f, 239f / 255f, 63f / 255f, 1f));
+        COLORDICT.Add("L2", new Color(240f / 255f, 235f / 255f, 45f / 255f, 1f));
+        COLORDICT.Add("M2", new Color(219f / 255f, 225f / 255f, 39f / 255f, 1f));
+        COLORDICT.Add("N2", new Color(189f / 255f, 214f / 255f, 48f / 255f, 1f));
+        COLORDICT.Add("O2", new Color(154f / 255f, 196f / 255f, 60f / 255f, 1f));
+        COLORDICT.Add("P2", new Color(118f / 255f, 169f / 255f, 64f / 255f, 1f));
 
         keyArray = COLORDICT.Keys.ToArray();
         maintext = GameObject.Find("maintext").GetComponent<Text>();
